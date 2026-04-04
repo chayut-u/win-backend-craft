@@ -18,6 +18,11 @@ It captures Win's preferred backend implementation style for Flask-style layered
 ### Intended use
 Use this skill as a coding standard when implementing or reviewing backend changes in repositories that follow a layered API structure.
 
+### Repo status
+- public reusable skill repository
+- focused on readability-first backend conventions
+- suitable as a team coding standard reference
+
 ---
 
 ## TH
@@ -37,3 +42,8 @@ repo นี้เก็บ local skill ชื่อ `win-backend-craft`
 
 ### วิธีใช้
 ใช้ skill นี้เป็น coding standard เวลาพัฒนา หรือ review backend ในโปรเจกต์ที่มีโครงสร้าง API แบบแยกเป็นชั้นอย่างชัดเจน
+
+### สถานะของ repo
+- เป็น public repository สำหรับเก็บ skill ที่นำกลับไปใช้ซ้ำได้
+- เน้นมาตรฐานการเขียน backend แบบอ่านง่ายและดูแลง่าย
+- เหมาะใช้เป็น reference สำหรับทีม
