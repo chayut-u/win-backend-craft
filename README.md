@@ -1,49 +1,54 @@
-# Win Backend Craft / แนวทางการเขียน Backend ของ Win
+# win-backend-craft
 
-## EN
-This repository contains the `win-backend-craft` local skill.
-It captures Win's preferred backend implementation style for Flask-style layered backends.
+skill สำหรับ Codex ที่ใช้เป็นแนวทางการเขียน backend แบบอ่านง่าย ดูแลง่าย และแยกชั้นความรับผิดชอบให้ชัดเจน
 
-### Focus
-- readability first
-- clear controller / service / repository separation
-- service-owned transactions
-- centralized messages and error handling
-- direct, maintainable SQLAlchemy usage
-- avoid lambda-heavy or abstraction-heavy code unless clearly justified
+## skill นี้ทำอะไร
 
-### Main content
+skill นี้ช่วยกำหนดแนวทางเวลาให้ Codex ช่วยเขียนหรือรีแฟกเตอร์ backend เช่น
+- จัดโครงสร้าง controller / service / repository
+- ทำ CRUD flow ให้ชัดและดูแลง่าย
+- แยก business logic ออกจาก controller
+- วาง validation, schema, response format และ error handling ให้เป็นระบบ
+- รักษาสไตล์โค้ดที่ตรงไปตรงมา ไม่ซับซ้อนเกินจำเป็น
+
+## เหมาะกับงานแบบไหน
+
+เหมาะกับโปรเจกต์ backend ที่มีลักษณะประมาณนี้
+- Flask-style backend
+- FastAPI-style backend
+- API server
+- admin system
+- ระบบหลังบ้านทั่วไป
+
+## แนวคิดหลัก
+
+- อ่านง่ายมาก่อน
+- maintainability มาก่อน abstraction
+- explicit code ดีกว่า magic
+- service คุม business logic และ transaction
+- repository คุมการเข้าถึง database
+- ใช้ ORM เป็นหลัก
+- หลีกเลี่ยงโค้ดที่ฉลาดเกินจนอ่านยาก
+
+## ไฟล์สำคัญ
+
 - `skills/win-backend-craft/SKILL.md`
 
-### Intended use
-Use this skill as a coding standard when implementing or reviewing backend changes in repositories that follow a layered API structure.
+## skill นี้เกี่ยวกับอะไร
 
-### Repo status
-- public reusable skill repository
-- focused on readability-first backend conventions
-- suitable as a team coding standard reference
+พูดง่าย ๆ คือเป็น skill สำหรับกำหนดมาตรฐานการเขียน backend ให้ Codex ทำงานตามสไตล์ที่เน้น
+- โค้ดอ่านง่าย
+- โครงสร้างชัด
+- แก้ง่าย
+- โตต่อได้
+- ลด logic มั่วปนกันหลายชั้น
 
----
+## เหมาะกับใคร
 
-## TH
-repo นี้เก็บ local skill ชื่อ `win-backend-craft`
-ใช้เป็นแนวทางมาตรฐานการเขียน backend ตามสไตล์ที่ Win ต้องการ สำหรับโปรเจกต์แนว Flask-style layered backend
+- คนที่อยากให้ AI ช่วยเขียน backend แบบมีมาตรฐาน
+- คนที่ไม่อยากได้โค้ดซับซ้อนเกินจำเป็น
+- ทีมที่อยากให้ controller บาง, service ชัด, repository ตรงไปตรงมา
 
-### จุดเน้น
-- อ่านง่ายเป็นอันดับแรก
-- แยก controller / service / repository ให้ชัด
-- transaction อยู่ใน service layer
-- รวม messages และ error handling ไว้ส่วนกลาง
-- ใช้ SQLAlchemy แบบตรงไปตรงมาและดูแลง่าย
-- หลีกเลี่ยงโค้ดที่ abstraction เยอะเกิน หรืออ่านยากโดยไม่จำเป็น
+## สรุป
 
-### เนื้อหาหลัก
-- `skills/win-backend-craft/SKILL.md`
-
-### วิธีใช้
-ใช้ skill นี้เป็น coding standard เวลาพัฒนา หรือ review backend ในโปรเจกต์ที่มีโครงสร้าง API แบบแยกเป็นชั้นอย่างชัดเจน
-
-### สถานะของ repo
-- เป็น public repository สำหรับเก็บ skill ที่นำกลับไปใช้ซ้ำได้
-- เน้นมาตรฐานการเขียน backend แบบอ่านง่ายและดูแลง่าย
-- เหมาะใช้เป็น reference สำหรับทีม
+repo นี้คือ skill สำหรับ Codex ด้าน backend engineering โดยเน้น readability-first และ layered architecture เพื่อให้โค้ดที่ได้ใช้งานจริงและดูแลต่อได้ง่าย
